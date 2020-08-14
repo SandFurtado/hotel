@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/lib/bootstrap.min.css">
+  <script src="./assets/js/lib/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Home</title>
+</head>
+
+<body>
+
+  <nav class="nav navbar bg-dark navbar-dark">
+    <div class="container">
+      <a href="#" class="navbar-brand"><i class="fas fa-hotel"></i> Hotel</a>
+    </div>
+  </nav>
+
+  <section class="text-center">
+    <div>
+
+      <h1>Hotel</h1>
+      <!-- Botão cadastrar hotel -->
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cadastro-hotel">
+        Cadastrar Hotel
+      </button>
+      <!-- Modal do botão cadastrar hotel -->
+      <div class="modal fade" id="cadastro-hotel" tabindex="-1" aria-labelledby="cad-hotel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cad-hotel">Cadastrar Hotel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="formulario">
+                <div class="form-group row">
+                  <label for="nome-hotel" class="col-sm-2 col-form-label">Nome</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nome-hotel" placeholder="Nome" required>
+                  </div>
+                </div>
+
+                
+                <div class="form-group row">
+                  <label for="endereco" class="col-sm-2 col-form-label">Endereco</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="endereco" placeholder="Rua, Avenida" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="cidade" class="col-sm-2 col-form-label">Cidade</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="cidade" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="estado" class="col-sm-2 col-form-label">Estado</label>
+                  <div class="col-sm-10">
+                    <select id="estado" class="form-control">
+                      <option selected>Escolha</option>
+                      <option>AM</option>
+                    </select>                  
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="cep" class="col-sm-2 col-form-label">Cep</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="cep" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="sobre" class="col-sm-2 col-form-label">Sobre</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="sobre" rows="3" required></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="arquivo" class="col-sm-2 col-form-label">Fotos</label>
+                  <div class="col-sm-10">
+                    <input type="file" class="form-control-file" id="arquivo" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="comodidade" class="col-sm-3 col-form-label">Comodidades</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" id="Comodidade" rows="3" required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success">Cadastrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Butão cadastrar quarto  -->
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#quarto-hotel">
+        Cadastrar Quartos
+      </button>
+      <!-- Modal do botão cadastrar quarto-->
+      <div class="modal fade" id="quarto-hotel" tabindex="-1" aria-labelledby="cad-quarto" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cad-quato">Cadastrar Quartos</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="nome-quarto" class="col-sm-2 col-form-label">Nome</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nome-quarto" placeholder="Nome" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="descr-quarto" class="col-sm-2 col-form-label">Descrição</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="descr-quarto" rows="3" required></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="preco" class="col-sm-2 col-form-label">Preço</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="preco" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="qtd-hoespede" class="col-sm-2 col-form-label">Nº Hóspedes</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="qtd-hoespede" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="qtd-cama" class="col-sm-2 col-form-label">Nº Camas</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="qtd-cama" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="arquivo" class="col-sm-2 col-form-label">Fotos</label>
+                  <div class="col-sm-10">
+                    <input type="file" class="form-control-file" id="arquivo" required>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success">Cadastrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
